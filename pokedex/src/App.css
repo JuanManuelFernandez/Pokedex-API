@@ -1,5 +1,13 @@
+@font-face {
+  font-family: "Pixel Emulator";
+  src: url("src/assets/fonts/Pixel Emulator.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: #222;
+  font-family: "Pixel Emulator", sans-serif;
 }
 
 .ContenedorPokemon {
