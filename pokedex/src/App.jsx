@@ -43,7 +43,7 @@ function App() {
             <div className='ContenedorBuscadorYDatos'>
               <div className='ContenedorBuscador'>
                 <input className='Buscador' value={busqueda} onChange={(e) => setBusqueda(e.target.value)}></input>
-                <button onClick={buscar}>Buscar</button>
+                <button className='BtnBuscar' onClick={buscar}><img className='BtnBuscarImg' src='src/assets/Lupa.png'></img></button>
               </div>
               <div className='ContenedorDatos'>
                 <span>Nombre: {pokemon?.name ?? ''}</span>

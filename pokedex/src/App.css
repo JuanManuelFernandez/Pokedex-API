@@ -8,6 +8,7 @@
 body {
   background-color: #ffffff;
   font-family: "Pixel Emulator", sans-serif;
+  color: #ffff;
   height: 100vh;
   margin: 0;
   display: flex;
@@ -60,6 +61,7 @@ body {
 .ContenedorBuscador {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-bottom: 0;
   gap: 5px;
 }
@@ -71,6 +73,16 @@ body {
   text-indent: 15px;
   width: 180px;
   height: 40px;
+}
+
+.BtnBuscar {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.BtnBuscarImg {
+  width: 50px;
 }
 
 .ContenedorDatos {
