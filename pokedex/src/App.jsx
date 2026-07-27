@@ -66,7 +66,7 @@ function App() {
 
   return (
     <>
-      <section>
+      <section className='ContenedorMain'>
         <div className='ContenedorPokedex'>
           <img src='src/assets/pokedex.png' className='Pokedex'></img>
 

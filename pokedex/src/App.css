@@ -9,11 +9,25 @@ body {
   background-color: #ffffff;
   font-family: "Pixel Emulator", sans-serif;
   color: #ffff;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('src/assets/Fondo.png');
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px); 
+  z-index: -1;
 }
 
 .ContenedorPokedex {
@@ -55,7 +69,7 @@ body {
   display: flex;
   flex-direction: column;
   transform: translateY(-25px);
-  gap: 50px;
+  gap: 20px;
 }
 
 .ContenedorBuscador {
@@ -73,7 +87,7 @@ body {
   border-radius: 10px;
   text-indent: 15px;
   width: 180px;
-  height: 40px;
+  height: 50px;
 }
 
 .BtnBuscar {
