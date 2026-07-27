@@ -27,16 +27,21 @@ function App() {
   return (
     <>
       <section>
-        <input value={busqueda} onChange={(e) => setBusqueda(e.target.value)}></input>
-        <button onClick={buscar}>Buscar</button>
-        <div className='ContenedorPokemon'>
-          <div className='ContenedorImg'>
-            <img className='ImgPokemon' src={pokemon?.sprites?.front_default ?? ''} alt={pokemon?.name ?? ''}></img>
-          </div>
-          <div className='ContenedorDatos'>
-            <span>Nombre: {pokemon?.name ?? ''}</span>
-            <span>Altura: {pokemon?.height ?? ''}</span>
-            <span>Peso: {pokemon?.weight ?? ''}</span>
+        <div className='ContenedorPokedex'>
+          <img src='src/assets/pokedex.png' className='Pokedex'></img>
+
+          
+          <div className='ContenedorPokemon'>
+            <div className='ContenedorImg'>
+              <img className='ImgPokemon' src={pokemon?.sprites?.front_default ?? ''} alt={pokemon?.name ?? ''}></img>
+            </div>
+            <input value={busqueda} onChange={(e) => setBusqueda(e.target.value)}></input>
+            <button onClick={buscar}>Buscar</button>
+            <div className='ContenedorDatos'>
+              <span>Nombre: {pokemon?.name ?? ''}</span>
+              <span>Altura: {pokemon?.height ?? ''}</span>
+              <span>Peso: {pokemon?.weight ?? ''}</span>
+            </div>
           </div>
         </div>
       </section> 
