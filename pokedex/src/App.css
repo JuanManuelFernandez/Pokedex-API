@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #222;
+  background-color: #ffffff;
   font-family: "Pixel Emulator", sans-serif;
   height: 100vh;
   margin: 0;
@@ -29,11 +29,15 @@ body {
 
 
 .ContenedorPokemon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: absolute;
-  top: 590px;    /* ajustá esto a ojo hasta que caiga dentro de la pantalla gris */
-  left: 200px;    /* idem */
-  width: 300px;  /* ancho aproximado de la pantalla gris en tu diseño */
-  height: 200px; /* alto aproximado */
+  top: 590px;    
+  left: 250px;   
+  width: 100px;  
+  height: 200px; 
+  gap: 30px;
 }
 
 .ContenedorImg {
@@ -46,7 +50,31 @@ body {
   height: 200px;
 }
 
+.ContenedorBuscadorYDatos {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-25px);
+  gap: 50px;
+}
+
+.ContenedorBuscador {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+  gap: 5px;
+}
+
+.Buscador {
+  font-family: "Pixel Emulator", sans-serif;
+  border: none;
+  border-radius: 10px;
+  text-indent: 15px;
+  width: 180px;
+  height: 40px;
+}
+
 .ContenedorDatos {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }

@@ -6,7 +6,7 @@ function App() {
   const [busqueda, setBusqueda] = useState('')
   const [cargando, setCargando] = useState(false)
   const [error, setError] = useState(null)
-
+  const [peso, setPeso] = useState('')
 
   const buscar = async() => {
     try{
@@ -15,6 +15,7 @@ function App() {
       const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${busqueda}`)
       const data = await res.json()
       console.log(data)
+      convertirPeso(data)
       setPokemon(data)
     }
     catch {
@@ -23,6 +24,10 @@ function App() {
     setCargando(false)
   }
 
+  function convertirPeso(pesoPokemon) {
+    const pesoConvertido = pesoPokemon.weight/10
+    setPeso(pesoConvertido)
+  }
 
   return (
     <>
@@ -35,12 +40,16 @@ function App() {
             <div className='ContenedorImg'>
               <img className='ImgPokemon' src={pokemon?.sprites?.front_default ?? ''} alt={pokemon?.name ?? ''}></img>
             </div>
-            <input value={busqueda} onChange={(e) => setBusqueda(e.target.value)}></input>
-            <button onClick={buscar}>Buscar</button>
-            <div className='ContenedorDatos'>
-              <span>Nombre: {pokemon?.name ?? ''}</span>
-              <span>Altura: {pokemon?.height ?? ''}</span>
-              <span>Peso: {pokemon?.weight ?? ''}</span>
+            <div className='ContenedorBuscadorYDatos'>
+              <div className='ContenedorBuscador'>
+                <input className='Buscador' value={busqueda} onChange={(e) => setBusqueda(e.target.value)}></input>
+                <button onClick={buscar}>Buscar</button>
+              </div>
+              <div className='ContenedorDatos'>
+                <span>Nombre: {pokemon?.name ?? ''}</span>
+                <span>Altura: {pokemon?.height ?? ''}</span>
+                <span>Peso: {peso}</span>
+              </div>
             </div>
           </div>
         </div>
