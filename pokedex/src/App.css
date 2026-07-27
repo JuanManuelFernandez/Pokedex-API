@@ -68,6 +68,7 @@ body {
 
 .Buscador {
   font-family: "Pixel Emulator", sans-serif;
+  background-color: #ffff;
   border: none;
   border-radius: 10px;
   text-indent: 15px;
@@ -88,5 +89,5 @@ body {
 .ContenedorDatos {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
